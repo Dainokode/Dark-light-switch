@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark/light mode switch</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/public/css/main.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="switch-container">
+      <input type="checkbox" id="checkbox" class="checkbox" />
+      <label for="checkbox">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+        <div class="ball"></div>
+      </label>
+    </div>
+
+    <script>
+      const checkbox = document.querySelector("#checkbox");
+      checkbox.addEventListener("change", () => {
+        document.querySelector("body").classList.toggle("white");
+      });
+    </script>
+  </body>
+</html>
